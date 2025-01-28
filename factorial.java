@@ -11,21 +11,26 @@ public class factorial {
         }
         return fact;
     }
+      // calculating binomial function using factorial 
+  public static int bin_coeff(int n , int r){
+    int a = factorial(n);
+    int b = factorial(r);
+    int c = factorial(n-r);
+    int coeff = a /(b*c);
+    return coeff;
+}
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number:");
         int n = sc.nextInt();
+        System.out.print("Enter r:");
+        int r = sc.nextInt();
         int fact = factorial(n);
-        System.out.print("Factorial is: "+ fact);
+        int coeff = bin_coeff(n,r);
+        System.out.println("Factorial is: "+ fact);
+        System.out.println("Binomial coefficient is:" + coeff);
     }
-  // calculating binomial function using factorial 
-  public static int bin_coeff(int n , int r){
-       int a = factorial(n);
-       int b = factorial(r);
-       int c = factorial(n-r);
-       int coeff = a /(b*c);
-       return coeff;
-  }
+
 }
 
 

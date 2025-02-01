@@ -6,7 +6,7 @@ public static void flyod_tri(int n){
         for(int i=1 ; i<=n ;i++){
             // inner loop 1 for spaces 
             for (int j = 1 ; j <= i; j++){
-                System.out.print(counter);
+                System.out.print(counter+" ");
                 counter++;
             }
             // inner loop 2 for stars
